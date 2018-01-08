@@ -9,8 +9,8 @@ var connection = mysql.createConnection({
     user: "root",
 
     // Your password
-    password: "",
-    database: "top_songsDB"
+    password: "Nonfatbearz1",
+    database: "bamazon"
 });
 
 connection.connect(function (err) {
@@ -22,12 +22,12 @@ function beginSearch() {
     inquirer
         .prompt([
             {
-                name: "action",
+                name: "idNumber",
                 type: "input",
-                message: "Please enter the ID of the product you would like to buy:"
+                message: "Please enter the ID number of the product you would like to buy:"
             },
             {
-                name: "action",
+                name: "quantity",
                 type: "input",
                 message: "Please enter the number of units of the chosen item you would like to buy:"
             }
@@ -36,7 +36,7 @@ function beginSearch() {
             var query = "SELECT product_name, department_name, price, stock_quantit FROM bamazon WHERE ?";
             connection.query(query, function (err, res) {
                 for (var i=0; i<res.length; i++) {
-                    console.log("ID: " + res[i].id);
+                    
                 }
             }
         )
