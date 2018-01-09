@@ -15,7 +15,7 @@ var connection = mysql.createConnection({
 
 connection.connect(function (err) {
     if (err) throw err;
-    beginSearch();
+    
 });
 
 // validateInput makes sure that the user is supplying only positive integers for their inputs
@@ -125,7 +125,7 @@ function displayInventory() {
         console.log("---------------------------------------------------------------------\n");
 
         //Prompt the user for item/quantity they would like to purchase
-        promptUserPurchase();
+        beginSearch();
     })
 }
 
