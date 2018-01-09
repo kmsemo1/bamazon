@@ -102,7 +102,7 @@ function displayInventory() {
     
 
     // Construct the db query string
-    queryStr = 'SELECT * FROM products';
+    var queryStr = 'SELECT * FROM products';
 
     // Make the db query
     connection.query(queryStr, function (err, data) {
