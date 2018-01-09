@@ -99,7 +99,7 @@ function beginSearch() {
 
 // displayInventory will retrieve the current inventory from the database and output it to the console
 function displayInventory() {
-    // console.log('___ENTER displayInventory___');
+    
 
     // Construct the db query string
     queryStr = 'SELECT * FROM products';
@@ -108,7 +108,7 @@ function displayInventory() {
     connection.query(queryStr, function (err, data) {
         if (err) throw err;
 
-        console.log('Existing Inventory: ');
+        console.log('\nExisting Inventory: ');
         console.log('...................\n');
 
         var strOut = '';
